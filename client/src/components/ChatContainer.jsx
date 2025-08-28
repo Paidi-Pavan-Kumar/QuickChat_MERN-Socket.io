@@ -72,7 +72,7 @@ const ChatContainer = () => {
       </div>
 
       {/* ------- chat area ------- */}
-      <div className="flex flex-col flex-1 min-h-0 h-[calc(100dvh-120px)] overflow-y-auto p-3 pb-24 md:pb-6">
+      <div className="flex flex-col h-[calc(100%-120px)] overflow-y-scroll p-3 pb-6">
         {messages.map((msg, index) => (
           <div
             key={index}
@@ -117,8 +117,8 @@ const ChatContainer = () => {
       </div>
 
       {/* ------- bottom area ------- */}
-      <div className="fixed bottom-0 left-0 right-0 flex items-center gap-3 p-3 bg-black/60 md:static md:bg-transparent z-10">
-        <div className="flex-1 flex items-center bg-gray-100/12 px-3 rounded-full min-h-[48px]">
+      <div className="absolute bottom-0 left-0 right-0 flex items-center gap-3 p-3">
+        <div className="flex-1 flex items-center bg-gray-100/12 px-3 rounded-full">
           <input
             onChange={(e) => setInput(e.target.value)}
             value={input}
@@ -138,7 +138,7 @@ const ChatContainer = () => {
             <img
               src={assets.gallery_icon}
               alt="upload"
-              className="w-6 h-6 mr-2 cursor-pointer"
+              className="w-5 mr-2 cursor-pointer"
             />
           </label>
         </div>
@@ -146,7 +146,7 @@ const ChatContainer = () => {
           onClick={handleSendMessage}
           src={assets.send_button}
           alt="send"
-          className="w-8 h-8 cursor-pointer"
+          className="w-7 cursor-pointer"
         />
       </div>
     </div>
