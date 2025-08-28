@@ -6,9 +6,9 @@ const userSchema = new mongoose.Schema({
         required : true, 
         unique : true
     },
-    fullname : {
+    fullName : {
         type : String,
-        require : true,
+        required : true,
     },
     password : {
         type : String,
